@@ -1,0 +1,113 @@
+
+  
+  <!--This field is required
+
+  
+
+  
+  Please enter a valid email address
+  This field is required
+
+  
+  Please select a query type
+
+  
+  This field is required
+
+ 
+  To submit this form, please consent to being contacted
+
+  Submit
+
+  Message Sent!
+  Thanks for completing the form. We'll be in touch soon!-->
+  
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Contact form</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <form id="container" onsubmit="return false">
+    <div class="info">
+      <!--Header section-->
+      <header>
+        <h1>Contact Us</h1>
+      </header>
+
+      <!--Names Section-->
+      <section class="Names">
+        <div class="firstname">
+          <label for="firstname">First Name*</label>
+          <input type="text" id="firstname" name="firstname">
+          <p style="color: red;" id="firsterror">This input field is required</p>
+        </div>
+
+        <div class="lastname">
+          <label for="lastname">Last Name*</label>
+          <input type="text" id="lastname" name="lastname">
+          <p style="color: red;" id="lasterror">This input field is required</p>
+        </div>
+      </section>
+
+      <!--E-mails Section-->
+      <section class="email">
+        <label for="email">Email Address*</label>
+        <input type="email" id="email" name="email">
+        <p style="color: red; display: none; font-weight: 700;" id="emailerror">Please enter a valid email address</p>
+      </section>
+
+      <!--Query type section-->
+      <section class="query">
+        <p>Query Type*</p>
+        <div class="queries">
+          <div class="query-one">
+            <input type="radio" name="query" id="query-one" value="General Enquiry">
+            <label for="query-one">General Enquiry</label>
+          </div>
+
+          <div class="query-two">
+            <input type="radio" name="query" value="Support Request"> Support Request
+          </div>
+        </div>
+        <p style="color: red; display: none; font-weight: 700;" id="queryerror">Please select a query type</p>
+      </section>
+
+      <!--Message section-->
+      <section class="message">
+        <p>Message*</p>
+        <textarea name="message" id="message"></textarea>
+        <p style="color: red; display: none; font-weight: 700;" id="messageerror">This field is required</p>
+      </section>
+
+      <!--Terms and conditions-->
+      <section class="terms">
+        <label for="terms"><input type="checkbox" id="terms">I consent to being contacted by the team*</label>
+        <p style="color: red; display: none; font-weight: 700;" id="termserror">To submit this form, please consent to being contacted</p>
+      </section>
+
+      <!--Submit Button-->
+      <section class="submit">
+        <button onclick="validateForm()">Submit</button>
+      </section>
+    </div>
+  </form>
+
+  <!--Alert Box-->
+  <section class="alert" >
+    <h1 class="alert-svg"> 
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" fill="none" viewBox="0 0 20 21">
+      <path fill="#fff" d="M14.28 7.72a.748.748 0 0 1 0 1.06l-5.25 5.25a.748.748 0 0 1-1.06 0l-2.25-2.25a.75.75 0 1 1 1.06-1.06l1.72 1.72 4.72-4.72a.75.75 0 0 1 1.06 0Zm5.47 2.78A9.75 9.75 0 1 1 10 .75a9.76 9.76 0 0 1 9.75 9.75Zm-1.5 0A8.25 8.25 0 1 0 10 18.75a8.26 8.26 0 0 0 8.25-8.25Z"/>
+    </svg> 
+      Message Sent!
+    </h1>
+    <p>Thanks for completing the form. We'll be in touch soon!</p>
+  </section>
+  <script src="validate.js"></script>
+</body>
+</html>

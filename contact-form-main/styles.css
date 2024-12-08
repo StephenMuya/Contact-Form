@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+html,
+body{
+    width: 100%;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10em;
+    flex-wrap: wrap;
+    background-color: hsl(148, 38%, 91%);
+}
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+header{
+    color: hsl(187, 24%, 22%);
+    font-weight: 900;
+    font-size: 25px;
+}
+
+#container{
+   width: auto;
+   height: 800px;
+   background-color: white;
+   border-radius: 15px;
+   margin-top: 30px;
+}
+
+.info{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.Names{
+    display: flex;
+    margin-bottom: 25px;
+}
+.firstname,
+.lastname{
+    display: flex;
+    flex-direction: column;
+}
+
+.firstname input{
+    width: 400px;
+    height: 50px;
+    margin-right: 30px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+ input:focus{
+    background-color: hsl(148, 38%, 91%);
+}
+
+.firstname p{
+    color: hsl(0, 66%, 54%);
+    font-weight: 700;
+    display: none;
+}
+
+.firstname label,
+.lastname label{
+    margin-bottom: 10px;
+}
+
+.lastname input {
+    width: 374px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.lastname p{
+    color: hsl(0, 66%, 54%);
+    font-weight: 700;
+    display: none;
+}
+
+.email{
+    display: flex;
+    flex-direction: column;
+}
+.email input{
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.queries{
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.query-one{
+    display: flex;
+    align-items: center;
+    border: 2px solid  black;
+    margin-right: 15px;
+    width: 400px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.query-one input{
+    margin-left: 10px;
+}
+
+.query-one input[type="radio"] {
+    width: 20px; 
+    height: 20px; 
+    transform: scale(0.8);
+    margin-right: 10px;
+}
+
+.query-two input[type="radio"] {
+    width: 20px; 
+    height: 20px; 
+    transform: scale(0.8);
+    margin-right: 10px;
+}
+
+.query-two{
+    display: flex;
+    align-items: center;
+    border: 2px solid  black;
+    border-radius: 5px;
+    width: 390px;
+}
+
+
+.query-two input{
+    margin-left: 10px;
+}
+
+.message p{
+    margin-bottom: 10px;
+}
+
+.message textarea{
+    font-size: 20px;
+    width: 100%;
+    height: 150px;
+    resize: none;
+    border-radius: 5px;
+}
+
+.terms{
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    flex-direction: column;
+}
+
+
+.terms label > input{
+    margin-right: 10px;
+}
+
+
+.submit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.submit button{
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 5px;
+    color: white;
+    background-color: hsl(169, 82%, 27%);
+    border: 0;
+}
+
+.submit button:hover{
+    background-color: hsl(187, 24%, 22%);
+}
+
+body .alert{
+    display: none;
+    max-width: 450px;
+    min-width: 450px;
+    background-color: hsl(169, 82%, 27%);
+    border-radius: 15px;
+    position: absolute;
+    top: 0;
+}
+
+.alert h1,
+.alert p{
+    margin-left: 10px;
+}
+
+.alert p{
+    width: 100%;
+}
+
+@media (min-width: 320px) and (max-width: 780px) {
+    body{
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    #container {
+        width: 100%;
+        height: auto;
+        margin-top: 55px;
+    }
+
+    header{
+        font-size: 15px;
+    }
+
+    .Names {
+        flex-direction: column;
+    }
+
+    .firstname input, .lastname input {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .queries {
+        flex-direction: column;
+    }
+
+    .query-one, .query-two {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .query-two{
+        height: 50px;
+    }
+
+    .terms {
+        align-items: flex-start;
+    }
+
+    .terms input[type="checkbox"] {
+        margin-bottom: 10px;
+        transform: scale(1.5);
+    }
+
+    .submit button{
+       margin-bottom: 20px;
+    }
+    
+    body .alert{
+        min-width: 350px;
+        max-width: 350px;
+    }
+}
